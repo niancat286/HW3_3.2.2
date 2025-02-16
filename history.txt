@@ -1,0 +1,359 @@
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$ mkdir HW3_3.2.2                                                    [22:43:21]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$ cd HW3_3.2.2                                                       [22:43:35]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2
+$ git init                                                           [22:43:39]
+Initialized empty Git repository in /Users/yasya/repo/HW3_3.2.2/.git/
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ echo "First" > fileA.txt                                           [22:43:45]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git add fileA.txt                                                  [22:43:49]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git commit -m "Add fileA.txt"                                      [22:43:57]
+
+[main (root-commit) 312a728] Add fileA.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileA.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ echo "Second" > fileB.txt                                          [22:44:00]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git add fileB.txt                                                  [22:44:03]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git commit -m "Add fileB.txt"                                      [22:44:07]
+
+[main a208cc8] Add fileB.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileB.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ echo "Update first" >> fileA.txt                                   [22:44:12]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git add fileA.txt                                                  [22:44:17]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$ git commit -m "Update fileA.txt"                                   [22:44:20]
+
+[main 163ce96] Update fileA.txt
+ 1 file changed, 1 insertion(+)
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git log --oneline                                                  [22:44:23]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git remote add origin git@github.com:niancat286/HW3_3.2.2.git      [22:44:32]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git remote -v                                                      [22:45:53]
+
+origin	git@github.com:niancat286/HW3_3.2.2.git (fetch)
+origin	git@github.com:niancat286/HW3_3.2.2.git (push)
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git push -u origin main                                            [22:46:07]
+
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (9/9), 731 bytes | 731.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:niancat286/HW3_3.2.2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git branch -r                                                      [22:46:18]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git checkout -b feature-x                                          [22:46:22]
+
+Switched to a new branch 'feature-x'
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ echo "Feature X" > feature.txt                                     [22:46:42]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x!
+$ git add feature.txt                                                [22:46:46]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x!
+$ git commit -m "Add feature X"                                      [22:46:51]
+
+[feature-x 30f8533] Add feature X
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ echo "Update Feature X" >> feature.txt                             [22:46:57]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x!
+$ git add .                                                          [22:47:03]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x!
+$ git commit -m "Update feature X"                                   [22:47:13]
+
+[feature-x 0bffd35] Update feature X
+ 1 file changed, 1 insertion(+)
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ git push -u origin feature-x                                       [22:47:21]
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 607 bytes | 607.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature-x' on GitHub by visiting:
+remote:      https://github.com/niancat286/HW3_3.2.2/pull/new/feature-x
+remote: 
+To github.com:niancat286/HW3_3.2.2.git
+ * [new branch]      feature-x -> feature-x
+branch 'feature-x' set up to track 'origin/feature-x'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ git checkout main                                                  [22:47:26]
+
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git pull origin main                                               [22:47:32]
+
+From github.com:niancat286/HW3_3.2.2
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git log --oneline                                                  [22:47:39]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git checkout feature-x                                             [22:47:47]
+
+Switched to branch 'feature-x'
+Your branch is up to date with 'origin/feature-x'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ git pull origin feature-x                                          [22:48:47]
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 945 bytes | 236.00 KiB/s, done.
+From github.com:niancat286/HW3_3.2.2
+ * branch            feature-x  -> FETCH_HEAD
+   0bffd35..a08d986  feature-x  -> origin/feature-x
+Updating 0bffd35..a08d986
+Fast-forward
+ new_feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new_feature.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ git log --oneline --graph                                          [22:48:53]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 feature-x
+$ git checkout main                                                  [22:49:04]
+
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git merge feature-x                                                [22:49:12]
+
+Updating 163ce96..a08d986
+Fast-forward
+ feature.txt     | 2 ++
+ new_feature.txt | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 feature.txt
+ create mode 100644 new_feature.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git push origin main                                               [22:49:17]
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:niancat286/HW3_3.2.2.git
+   163ce96..a08d986  main -> main
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git push origin --delete feature-x                                 [22:49:22]
+
+To github.com:niancat286/HW3_3.2.2.git
+ - [deleted]         feature-x
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git branch -r                                                      [22:49:29]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git checkout -b hotfix                                             [22:49:34]
+
+Switched to a new branch 'hotfix'
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix
+$ echo "Hotfix applied" > hotfix.txt                                 [22:49:41]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix!
+$ git add hotfix.txt                                                 [22:49:49]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix!
+$ git commit -m "Apply hotfix"                                       [22:49:55]
+
+[hotfix aefbe78] Apply hotfix
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hotfix.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix
+$ git push --set-upstream origin hotfix                              [22:49:59]
+
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'hotfix' on GitHub by visiting:
+remote:      https://github.com/niancat286/HW3_3.2.2/pull/new/hotfix
+remote: 
+To github.com:niancat286/HW3_3.2.2.git
+ * [new branch]      hotfix -> hotfix
+branch 'hotfix' set up to track 'origin/hotfix'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix
+$ echo "Additional fix" >> hotfix.txt                                [22:50:08]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix!
+$ git add .                                                          [22:50:23]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix!
+$ git commit -m "Update hotfix"                                      [22:50:29]
+
+[hotfix b74d5ff] Update hotfix
+ 1 file changed, 1 insertion(+)
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix
+$ git push                                                           [22:50:33]
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:niancat286/HW3_3.2.2.git
+   aefbe78..b74d5ff  hotfix -> hotfix
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 hotfix
+$ git checkout main                                                  [22:50:38]
+
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git merge hotfix                                                   [22:50:43]
+
+Updating a08d986..b74d5ff
+Fast-forward
+ hotfix.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 hotfix.txt
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git push origin main                                               [22:50:47]
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:niancat286/HW3_3.2.2.git
+   a08d986..b74d5ff  main -> main
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git branch -d hotfix                                               [22:50:53]
+
+Deleted branch hotfix (was b74d5ff).
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ git push origin --delete hotfix                                    [22:50:56]
+
+To github.com:niancat286/HW3_3.2.2.git
+ - [deleted]         hotfix
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ cd ..                                                              [22:51:01]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$                                                                    [22:51:22]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$ git clone git@github.com:niancat286/HW3_3.2.2.git cloned_HW3_3.2.2 [22:51:22]
+Cloning into 'cloned_HW3_3.2.2'...
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 24 (delta 3), reused 20 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (24/24), done.
+Resolving deltas: 100% (3/3), done.
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$ cd cloned_HW3_3.2.2                                                [22:54:30]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/cloned_HW3_3.2.2 main
+$ git status                                                         [22:54:45]
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/cloned_HW3_3.2.2 main
+$ git branch -a                                                      [22:54:50]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/cloned_HW3_3.2.2 main
+$ git remote remove origin                                           [22:54:55]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/cloned_HW3_3.2.2 main
+$ git remote -v                                                      [22:55:00]
+
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/cloned_HW3_3.2.2 main
+$ cd ..                                                              [22:55:04]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo
+$ cd HW3_3.2.2                                                       [22:55:17]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main
+$ touch history.txt                                                  [22:55:26]
+ 
+yasya@Yaroslavas-MacBook-Pro: ~/repo/HW3_3.2.2 main!
+$                                                                    [22:55:37]
